@@ -17,12 +17,15 @@ alert(numeri);
 
 // 2. Dopo 3 secondi chiedo all'utente di inserire i 5 numeri visti, uno alla volta
 var numeriUtente = [];
+var numeroIndovinato = false;
 
 setTimeout(
   function(){
     while ( numeriUtente.length < 5 ) {
       do {
         var numeroUtente = parseInt(prompt("Inserisci i numeri che hai visto"));
-      } while (isNaN(numeroUtente);
+      } while (isNaN(numeroUtente));
+      numeriUtente.push(numeroUtente);
+// 3. Capire quali numeri sono stati indovinati
     }
 }, 3000);
