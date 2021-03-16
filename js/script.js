@@ -17,7 +17,7 @@ alert(numeri);
 
 // 2. Dopo 3 secondi chiedo all'utente di inserire i 5 numeri visti, uno alla volta
 var numeriUtente = [];
-var numeroIndovinato = false;
+var numeroIndovinato = true;
 
 setTimeout(
   function(){
@@ -27,5 +27,12 @@ setTimeout(
       } while (isNaN(numeroUtente));
       numeriUtente.push(numeroUtente);
 // 3. Capire quali numeri sono stati indovinati
+      if (numeri.includes(numeroUtente) == true) {
+        console.log("Hai indovinato questi numeri "+ numeroUtente);
+        numeroIndovinato = true;
+      } else {
+        console.log("Riprova");
+        numeroIndovinato = false;
+      }
     }
 }, 3000);
