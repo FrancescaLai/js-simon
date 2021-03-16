@@ -7,16 +7,22 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 // 1. Genero 5 numeri casualmente che non possono ripetersi
 var numeri = [];
 
-while (numeri.length < 5) {
-  var numeroRandom = Math.floor(Math.random() * 5) + 1;
-  if (numeri.includes(numeroRandom) == false) {
+while ( numeri.length < 5 ) {
+  var numeroRandom = Math.floor(Math.random() * 10) + 1;
+  if ( numeri.includes(numeroRandom) == false ) {
     numeri.push(numeroRandom);
   }
 }
 alert(numeri);
 
-// 2. Dopo 30 secondi chiedo all'utente di inserire i 5 numeri visti, uno alla volta
+// 2. Dopo 3 secondi chiedo all'utente di inserire i 5 numeri visti, uno alla volta
+var numeriUtente = [];
+
 setTimeout(
   function(){
-    var numeroUtente = parseInt(prompt("Inserisci i numeri che hai visto"));
+    while ( numeriUtente.length < 5 ) {
+      do {
+        var numeroUtente = parseInt(prompt("Inserisci i numeri che hai visto"));
+      } while (isNaN(numeroUtente);
+    }
 }, 3000);
