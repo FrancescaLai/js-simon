@@ -13,4 +13,10 @@ while (numeri.length < 5) {
     numeri.push(numeroRandom);
   }
 }
-console.log(numeri);
+alert(numeri);
+
+// 2. Dopo 30 secondi chiedo all'utente di inserire i 5 numeri visti, uno alla volta
+setTimeout(
+  function(){
+    var numeroUtente = parseInt(prompt("Inserisci i numeri che hai visto"));
+}, 3000);
